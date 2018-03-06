@@ -13,8 +13,8 @@
   <packaging>pom</packaging>
   <modules>
   	<module>yrds-facade</module>
-  	<module>yrds-agent</module>
   	<module>yrds-dao</module>
   	<module>yrds-service</module>
+  	<module>yrds-proxy</module>
   </modules>
 </project>
