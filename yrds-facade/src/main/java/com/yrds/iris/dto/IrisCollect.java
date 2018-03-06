@@ -6,11 +6,11 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 /**
- * 虹膜登记请求
+ * 虹膜采集请求
  * @author Eric
  *
  */
-@ApiModel( value = "IrisRegist", description = "虹膜登记请求" )
+@ApiModel( value = "IrisCollect", description = "虹膜采集请求" )
 @Setter
 @Getter
 public class IrisCollect extends IrisMatch{

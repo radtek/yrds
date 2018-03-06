@@ -7,7 +7,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 /**
- * 虹膜设备登记请求DTO响应
+ * 虹膜设备登记请求DTO
  * @author Eric
  *
  */

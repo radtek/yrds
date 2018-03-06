@@ -7,7 +7,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 /**
- * 虹膜设备登信息对象
+ * 虹膜设备信息对象
  * @author Eric
  *
  */
