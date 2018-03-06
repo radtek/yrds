@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yrds.persist.dao.IrisDeviceMapper">
+  <resultMap id="BaseResultMap" type="com.yrds.persist.model.IrisDevice">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="device_id" jdbcType="VARCHAR" property="deviceId" />
+    <result column="descriptor" jdbcType="VARCHAR" property="descriptor" />
+    <result column="product_type" jdbcType="VARCHAR" property="productType" />
+    <result column="vendor_id" jdbcType="VARCHAR" property="vendorId" />
+    <result column="sensor_type" jdbcType="INTEGER" property="sensorType" />
+    <result column="register_flag" jdbcType="INTEGER" property="registerFlag" />
+    <result column="device_flag" jdbcType="INTEGER" property="deviceFlag" />
+    <result column="spetrum" jdbcType="INTEGER" property="spetrum" />
+    <result column="dev_img_format" jdbcType="VARCHAR" property="devImgFormat" />
+    <result column="dev_img_depth" jdbcType="INTEGER" property="devImgDepth" />
+    <result column="dev_img_width" jdbcType="INTEGER" property="devImgWidth" />
+    <result column="dev_img_height" jdbcType="INTEGER" property="devImgHeight" />
+    <result column="firmware_version" jdbcType="VARCHAR" property="firmwareVersion" />
+    <result column="login_ip" jdbcType="VARCHAR" property="loginIp" />
+    <result column="login_time" jdbcType="TIMESTAMP" property="loginTime" />
+    <result column="logout_time" jdbcType="TIMESTAMP" property="logoutTime" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="gate_code" jdbcType="VARCHAR" property="gateCode" />
+    <result column="gate_remark" jdbcType="VARCHAR" property="gateRemark" />
+    <result column="operator" jdbcType="VARCHAR" property="operator" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_update" jdbcType="TIMESTAMP" property="gmtUpdate" />
+  </resultMap>
+</mapper>

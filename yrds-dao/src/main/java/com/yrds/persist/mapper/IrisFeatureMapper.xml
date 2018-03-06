@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yrds.persist.dao.IrisFeatureMapper">
+  <resultMap id="BaseResultMap" type="com.yrds.persist.model.IrisFeature">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="device_id" jdbcType="BIGINT" property="deviceId" />
+    <result column="staff_id" jdbcType="BIGINT" property="staffId" />
+    <result column="img_depth" jdbcType="INTEGER" property="imgDepth" />
+    <result column="img_width" jdbcType="INTEGER" property="imgWidth" />
+    <result column="img_height" jdbcType="INTEGER" property="imgHeight" />
+    <result column="img_len" jdbcType="INTEGER" property="imgLen" />
+    <result column="feature_len" jdbcType="INTEGER" property="featureLen" />
+    <result column="alg_name" jdbcType="VARCHAR" property="algName" />
+    <result column="alg_version" jdbcType="VARCHAR" property="algVersion" />
+    <result column="match_time" jdbcType="TIMESTAMP" property="matchTime" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_update" jdbcType="TIMESTAMP" property="gmtUpdate" />
+    <result column="img_data" jdbcType="LONGVARBINARY" property="imgData" />
+    <result column="feature" jdbcType="LONGVARBINARY" property="feature" />
+  </resultMap>
+</mapper>
