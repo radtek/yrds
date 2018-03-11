@@ -1,4 +1,4 @@
-package com.yrds.persist.model;
+package com.yrds.iris.persist.model;
 
 import java.util.Date;
 import javax.persistence.*;

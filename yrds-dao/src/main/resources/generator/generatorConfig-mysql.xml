@@ -26,11 +26,11 @@
                         password="${spring.datasource.password}">
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="com.yrds.persist.model" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="com.yrds.iris.persist.model" targetProject="src/main/java"/>
 
-        <sqlMapGenerator targetPackage="com.yrds.persist.mapper" targetProject="src/main/java"/>
+        <sqlMapGenerator targetPackage="com.yrds.iris.persist.mapper" targetProject="src/main/java"/>
 
-        <javaClientGenerator targetPackage="com.yrds.persist.dao" targetProject="src/main/java"
+        <javaClientGenerator targetPackage="com.yrds.iris.persist.dao" targetProject="src/main/java"
                              type="XMLMAPPER">
         </javaClientGenerator>
 

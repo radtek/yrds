@@ -1,7 +1,7 @@
-package com.yrds.dao;
+package com.yrds.iris.dao;
 
 import com.kivi.framework.db.dao.IDao;
-import com.yrds.persist.model.Attendances;
+import com.yrds.iris.persist.model.Attendances;
 
 public interface AttendancesDao extends IDao<Attendances> {
 

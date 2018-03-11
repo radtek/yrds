@@ -1,7 +1,7 @@
-package com.yrds.persist.dao;
+package com.yrds.iris.persist.dao;
 
 import com.kivi.framework.db.util.MyMapper;
-import com.yrds.persist.model.IrisFeatureTemp;
+import com.yrds.iris.persist.model.IrisFeatureTemp;
 
 public interface IrisFeatureTempMapper extends MyMapper<IrisFeatureTemp> {
 }
