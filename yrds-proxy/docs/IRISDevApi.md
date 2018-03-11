@@ -1,41 +1,9 @@
-# IrisApi.IRISDevApi
-
-All URIs are relative to *https://localhost:8085/yrds-proxy*
-
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**irisDevHeartbeat**](IRISDevApi.md#irisDevHeartbeat) | **POST** /api/irisDevHeartbeat | IRIS设备心跳接口
-[**irisDevImportBatch**](IRISDevApi.md#irisDevImportBatch) | **POST** /api/irisDevImportBatch | IRIS设备信息批量导入接口
-[**irisDevLogin**](IRISDevApi.md#irisDevLogin) | **POST** /api/irisDevLogin | IRIS设备登录接口
-[**irisDevRegist**](IRISDevApi.md#irisDevRegist) | **POST** /api/irisDevRegist | IRIS设备注册接口
-
 
 <a name="irisDevHeartbeat"></a>
 # **irisDevHeartbeat**
 > IrisDeviceHeartbeatRsp irisDevHeartbeat(req)
 
 IRIS设备心跳接口
-
-IRIS设备心跳接口
-
-### Example
-```javascript
-var IrisApi = require('iris_api');
-
-var apiInstance = new IrisApi.IRISDevApi();
-
-var req = new IrisApi.IrisDeviceHeartbeat(); // IrisDeviceHeartbeat | req
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.irisDevHeartbeat(req, callback);
-```
 
 ### Parameters
 
@@ -62,27 +30,6 @@ No authorization required
 
 IRIS设备信息批量导入接口
 
-IRIS设备信息批量导入接口
-
-### Example
-```javascript
-var IrisApi = require('iris_api');
-
-var apiInstance = new IrisApi.IRISDevApi();
-
-var req = new IrisApi.IrisDeviceImport(); // IrisDeviceImport | req
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.irisDevImportBatch(req, callback);
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -108,27 +55,6 @@ No authorization required
 
 IRIS设备登录接口
 
-IRIS设备登录接口
-
-### Example
-```javascript
-var IrisApi = require('iris_api');
-
-var apiInstance = new IrisApi.IRISDevApi();
-
-var req = new IrisApi.IrisDeviceLogin(); // IrisDeviceLogin | req
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.irisDevLogin(req, callback);
-```
-
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -153,27 +79,6 @@ No authorization required
 > IrisDeviceRegRsp irisDevRegist(req)
 
 IRIS设备注册接口
-
-IRIS设备注册接口
-
-### Example
-```javascript
-var IrisApi = require('iris_api');
-
-var apiInstance = new IrisApi.IRISDevApi();
-
-var req = new IrisApi.IrisDeviceRegReq(); // IrisDeviceRegReq | req
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.irisDevRegist(req, callback);
-```
 
 ### Parameters
 
