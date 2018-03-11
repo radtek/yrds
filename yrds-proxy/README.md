@@ -12,7 +12,8 @@
 ## 2. 接口定义
 
 ### 2.1 HTTP JSON接口
-  <h2><a name="__Methods">Methods</a></h2>
+
+<h2><a name="__Methods">Methods</a></h2>
   [ Jump to <a href="#__Models">Models</a> ]
 
   <h2>Table of Contents </h2>
@@ -62,23 +63,14 @@
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-
   "data" : "{}",
-
   "errorTip" : "交易成功",
-
   "staffName" : "张三",
-
   "respMsg" : "成功",
-
   "version" : "aeiou",
-
   "resTranSeqId" : "aeiou",
-
   "respCode" : "S0000000",
-
   "staffId" : "0001"
-
 }</code></pre>
 
     <h3 class="field-label">Produces</h3>
@@ -130,23 +122,14 @@
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-
   "data" : "{}",
-
   "errorTip" : "交易成功",
-
   "staffName" : "张三",
-
   "respMsg" : "成功",
-
   "version" : "aeiou",
-
   "resTranSeqId" : "aeiou",
-
   "respCode" : "S0000000",
-
   "staffId" : "0001"
-
 }</code></pre>
 
     <h3 class="field-label">Produces</h3>
@@ -198,23 +181,14 @@
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-
   "data" : "{}",
-
   "errorTip" : "交易成功",
-
   "respMsg" : "成功",
-
   "accessToken" : "00000000000000000000000000000000",
-
   "deviceId" : "0000012345678901",
-
   "version" : "aeiou",
-
   "resTranSeqId" : "aeiou",
-
   "respCode" : "S0000000"
-
 }</code></pre>
 
     <h3 class="field-label">Produces</h3>
@@ -266,19 +240,12 @@
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-
   "data" : "{}",
-
   "errorTip" : "交易成功",
-
   "respMsg" : "成功",
-
   "version" : "aeiou",
-
   "resTranSeqId" : "aeiou",
-
   "respCode" : "S0000000"
-
 }</code></pre>
 
     <h3 class="field-label">Produces</h3>
@@ -330,31 +297,18 @@
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-
   "trantime" : "20180306165501",
-
   "data" : "{}",
-
   "tranSeqId" : "aeiou",
-
   "errorTip" : "交易成功",
-
   "sign" : "aeiou",
-
   "respMsg" : "成功",
-
   "tranCode" : "aeiou",
-
   "accessToken" : "00000000000000000000000000000000",
-
   "deviceId" : "0000012345678901",
-
   "version" : "aeiou",
-
   "resTranSeqId" : "aeiou",
-
   "respCode" : "S0000000"
-
 }</code></pre>
 
     <h3 class="field-label">Produces</h3>
@@ -406,19 +360,12 @@
     <h3 class="field-label">Example data</h3>
     <div class="example-data-content-type">Content-Type: application/json</div>
     <pre class="example"><code>{
-
   "data" : "{}",
-
   "errorTip" : "交易成功",
-
   "respMsg" : "成功",
-
   "version" : "aeiou",
-
   "resTranSeqId" : "aeiou",
-
   "respCode" : "S0000000"
-
 }</code></pre>
 
     <h3 class="field-label">Produces</h3>
@@ -621,8 +568,6 @@
 <div class="param">version (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> 返回接口版本  </div>
     </div>  <!-- field-items -->
   </div>
-
-
 
 ### 2.2 Socket接口
 
