@@ -1,0 +1,2 @@
+@REM java -jar %swagger-codegen%\swagger-codegen-cli-2.2.1.jar generate -i http://localhost:8085/yrds-proxy/v2/api-docs -l dynamic-html -o docs
+java -jar %swagger-codegen%\swagger-codegen-cli-2.2.1.jar generate -i http://localhost:8085/yrds-proxy/v2/api-docs -l html2 -o docs

@@ -7,4 +7,42 @@
   </parent>
   <artifactId>yrds-proxy</artifactId>
   <description>通讯前置代理服务</description>
+  
+   <dependencies>
+  		<!-- kivi -->
+  		<dependency>
+       		<groupId>com.kivi</groupId>
+       		<artifactId>framework-web</artifactId>
+       		<version>1.0.0</version>
+       	</dependency>
+       	<dependency>
+       		<groupId>com.kivi</groupId>
+       		<artifactId>framework-db</artifactId>
+       		<version>1.0.0</version>
+       	</dependency>
+       	<dependency>
+       		<groupId>com.kivi</groupId>
+       		<artifactId>framework-dubbo</artifactId>
+       		<version>1.0.0</version>
+       		<exclusions>
+       			<exclusion>
+       				<groupId>org.slf4j</groupId>
+       				<artifactId>slf4j-log4j12</artifactId>
+       			</exclusion>
+       		</exclusions>
+       	</dependency>
+       	<!-- /kivi -->
+       	<dependency>
+       		<groupId>com.yrds</groupId>
+       		<artifactId>yrds-facade</artifactId>
+       		<version>1.0.0</version>
+       	</dependency>
+       	
+       	<dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-devtools</artifactId>
+	        <optional>true</optional>
+	    </dependency>
+  </dependencies>
+  
 </project>
