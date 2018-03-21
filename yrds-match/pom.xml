@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.yrds</groupId>
+    <artifactId>yrds-parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <artifactId>yrds-match</artifactId>
+  <description>虹膜匹配服务</description>
+  <dependencies>
+  		<!-- kivi -->
+  		<dependency>
+       		<groupId>com.kivi</groupId>
+       		<artifactId>framework-aop</artifactId>
+       		<version>1.0.0</version>
+       	</dependency>
+       	<dependency>
+       		<groupId>com.kivi</groupId>
+       		<artifactId>framework-dubbo</artifactId>
+       		<version>1.0.0</version>
+       		<exclusions>
+       			<exclusion>
+       				<groupId>org.slf4j</groupId>
+       				<artifactId>slf4j-log4j12</artifactId>
+       			</exclusion>
+       		</exclusions>
+       	</dependency>
+       	<!-- /kivi -->
+       	<dependency>
+       		<groupId>com.yrds</groupId>
+       		<artifactId>yrds-facade</artifactId>
+       		<version>1.0.0</version>
+       	</dependency>
+       	
+       	<dependency>
+       		<groupId>com.yrds</groupId>
+       		<artifactId>yrds-dao</artifactId>
+       		<version>1.0.0</version>
+       	</dependency>
+       	
+       	<dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-devtools</artifactId>
+	        <optional>true</optional>
+	    </dependency>
+	</dependencies>
+  
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+  </build>
+</project>
