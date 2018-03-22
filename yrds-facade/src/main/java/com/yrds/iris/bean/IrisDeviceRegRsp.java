@@ -1,4 +1,4 @@
-package com.yrds.iris.dto;
+package com.yrds.iris.bean;
 
 import com.kivi.framework.dto.BaseResDTO;
 

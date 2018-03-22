@@ -1,8 +1,9 @@
-package com.yrds.iris.dto;
+package com.yrds.iris.bean;
 
 import java.util.List;
 
 import com.kivi.framework.dto.BaseReqDTO;
+import com.yrds.iris.bean.dto.IrisDeviceDTO;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -29,5 +30,5 @@ public class IrisDeviceImport extends BaseReqDTO{
             required = true,
             dataType = "List",
             example = "" )
-	private List<IrisDeviceBO>  devices;
+	private List<IrisDeviceDTO>  devices;
 }
