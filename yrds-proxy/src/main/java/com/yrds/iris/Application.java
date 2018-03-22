@@ -11,7 +11,7 @@ import com.kivi.framework.dubbo.annotation.DubboApplication;
 
 @EnableKiviFramework
 @EnableAutoConfiguration
-@MapperScan(basePackages={KiviFramework.MapperScan.KTF_MAPPER_SCAN,"com.yrdis.**.persist"})
+@MapperScan( basePackages = { KiviFramework.MapperScan.KTF_MAPPER_SCAN, "com.yrds" } )
 @DubboApplication
 @SpringBootApplication
 public class Application {
