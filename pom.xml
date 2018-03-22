@@ -16,5 +16,6 @@
   	<module>yrds-dao</module>
   	<module>yrds-service</module>
   	<module>yrds-proxy</module>
+  	<module>yrds-match</module>
   </modules>
 </project>

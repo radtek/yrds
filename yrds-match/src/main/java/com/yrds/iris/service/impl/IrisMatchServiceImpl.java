@@ -6,9 +6,10 @@ import org.springframework.stereotype.Service;
 import com.kivi.framework.db.page.PageInfoKtf;
 import com.kivi.framework.service.KtfNameService;
 import com.kivi.framework.vo.page.PageReqVO;
+import com.yrds.iris.bean.IrisMatch;
+import com.yrds.iris.bean.dto.IrisDeviceDTO;
+import com.yrds.iris.bean.dto.IrisMatchRspDTO;
 import com.yrds.iris.dao.IrisFeatureDao;
-import com.yrds.iris.dto.IrisMatch;
-import com.yrds.iris.dto.IrisMatchRsp;
 import com.yrds.iris.persist.model.IrisFeature;
 import com.yrds.iris.service.IrisMatchService;
 
@@ -22,7 +23,7 @@ public class IrisMatchServiceImpl implements IrisMatchService {
     private IrisFeatureDao irisFeatureDao;
 
     @Override
-    public IrisMatchRsp match( IrisMatch req ) {
+    public IrisMatchRspDTO match( IrisMatch req, IrisDeviceDTO dev ) {
         int slotId = ktfNameService.index();
         int slotCount = ktfNameService.countOnline();
         int offset = 0;
