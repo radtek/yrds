@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yrds.iris.persist.mapper.IrisFeatureMapperEx">
+  <resultMap id="BaseResultMap" type="com.yrds.iris.persist.model.IrisFeature">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="device_id" jdbcType="BIGINT" property="deviceId" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="img_depth" jdbcType="INTEGER" property="imgDepth" />
+    <result column="img_l_width" jdbcType="INTEGER" property="imgLWidth" />
+    <result column="img_l_height" jdbcType="INTEGER" property="imgLHeight" />
+    <result column="img_l_len" jdbcType="INTEGER" property="imgLLen" />
+    <result column="feature_l_len" jdbcType="INTEGER" property="featureLLen" />
+    <result column="img_r_width" jdbcType="INTEGER" property="imgRWidth" />
+    <result column="img_r_height" jdbcType="INTEGER" property="imgRHeight" />
+    <result column="img_r_len" jdbcType="INTEGER" property="imgRLen" />
+    <result column="feature_r_len" jdbcType="INTEGER" property="featureRLen" />
+    <result column="alg_name" jdbcType="VARCHAR" property="algName" />
+    <result column="alg_version" jdbcType="VARCHAR" property="algVersion" />
+    <result column="match_time" jdbcType="TIMESTAMP" property="matchTime" />
+    result column="match_count" jdbcType="BIGINT" property="matchCount" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_update" jdbcType="TIMESTAMP" property="gmtUpdate" />
+    <result column="img_l_data" jdbcType="LONGVARBINARY" property="imgLData" />
+    <result column="feature_l_data" jdbcType="LONGVARBINARY" property="featureLData" />
+    <result column="img_r_data" jdbcType="LONGVARBINARY" property="imgRData" />
+    <result column="feature_r_data" jdbcType="LONGVARBINARY" property="featureRData" />
+  </resultMap>
+  
+  <select id="listByPage" resultMap="BaseResultMap" >
+		select id, device_id, user_id, img_depth, img_l_width, img_l_height, img_l_len, 
+			feature_l_len, img_r_width, img_r_height, img_r_len, feature_r_len, alg_name, 
+			alg_version, match_time, status, gmt_create, gmt_update, img_l_data, 
+			feature_l_data, img_r_data, feature_r_data
+		from
+			iris_feature
+		<where>
+			<if test="#name !=null"> name=#{name} and </if>
+			MOD(id,#{slotCount})=#{slotId};
+		</where>
+		order by id
+  </select>
+  
+  <insert id="saveNotNull" parameterType="java.util.List">
+  		<selectKey resultType ="java.lang.Integer" keyProperty= "id" order= "AFTER">
+  		          SELECT LAST_INSERT_ID()
+        </selectKey>
+		insert into iris_feature (
+			device_id, 	user_id, img_depth, img_l_width, img_l_height, img_l_len, 
+			feature_l_len, 	img_r_width, img_r_height, img_r_len, feature_r_len, 
+			alg_name, alg_version, match_time, status, gmt_create, gmt_update, 
+			img_l_data, feature_l_data, img_r_data, feature_r_data )
+		values
+		<foreach collection="list" item="item" index="index" separator=",">
+		   (
+				#{item.deviceId		},
+				#{item.userId		},
+				#{item.imgDepth		},
+				#{item.imgLWidth	},
+				#{item.imgLHeight	},
+				#{item.imgLLen		},
+				#{item.featureLLen	},
+				#{item.imgRWidth	},
+				#{item.imgRHeight	},
+				#{item.imgRLen		},
+				#{item.featureRLen	},
+				#{item.algName		},
+				#{item.algVersion	},
+				#{item.matchTime	},
+				#{item.status		},
+				#{item.gmtCreate	},
+				#{item.gmtUpdate	},
+				#{item.imgLData		},
+				#{item.featureLData	},
+				#{item.imgRData		},
+				#{item.featureRData	}
+			)
+		</foreach>
+	</insert>
+	
+	<update id="updateMatchCount" parameterType="BaseResultMap"> 
+		update iris_feature 
+			set match_time=#{matchTime	}, match_count=match_count+1,gmt_update=#{gmtUpdate}
+		where
+			ID=#{id}
+	</update>
+  
+</mapper>

@@ -86,6 +86,12 @@ public class IrisDevice {
     private String firmwareVersion;
 
     /**
+     * 设备SDK的动态库
+     */
+    @Column(name = "sdk_lib")
+    private String sdkLib;
+
+    /**
      * 设备登录IP
      */
     @Column(name = "login_ip")
@@ -383,6 +389,24 @@ public class IrisDevice {
      */
     public void setFirmwareVersion(String firmwareVersion) {
         this.firmwareVersion = firmwareVersion;
+    }
+
+    /**
+     * 获取设备SDK的动态库
+     *
+     * @return sdk_lib - 设备SDK的动态库
+     */
+    public String getSdkLib() {
+        return sdkLib;
+    }
+
+    /**
+     * 设置设备SDK的动态库
+     *
+     * @param sdkLib 设备SDK的动态库
+     */
+    public void setSdkLib(String sdkLib) {
+        this.sdkLib = sdkLib;
     }
 
     /**

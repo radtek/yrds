@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yrds.persist.dao.IrisDeviceMapper">
-  <resultMap id="BaseResultMap" type="com.yrds.persist.model.IrisDevice">
+<mapper namespace="com.yrds.iris.persist.dao.IrisDeviceMapper">
+  <resultMap id="BaseResultMap" type="com.yrds.iris.persist.model.IrisDevice">
     <!--
       WARNING - @mbg.generated
     -->
@@ -19,6 +19,7 @@
     <result column="dev_img_width" jdbcType="INTEGER" property="devImgWidth" />
     <result column="dev_img_height" jdbcType="INTEGER" property="devImgHeight" />
     <result column="firmware_version" jdbcType="VARCHAR" property="firmwareVersion" />
+    <result column="sdk_lib" jdbcType="VARCHAR" property="sdkLib" />
     <result column="login_ip" jdbcType="VARCHAR" property="loginIp" />
     <result column="login_time" jdbcType="TIMESTAMP" property="loginTime" />
     <result column="logout_time" jdbcType="TIMESTAMP" property="logoutTime" />

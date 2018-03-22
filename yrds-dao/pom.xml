@@ -14,6 +14,11 @@
        		<version>1.0.0</version>
        	</dependency>
        	<!-- /kivi -->
+       	<dependency>
+       		<groupId>com.yrds</groupId>
+       		<artifactId>yrds-facade</artifactId>
+       		<version>1.0.0</version>
+       	</dependency>
   </dependencies>
   
   <build>

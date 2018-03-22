@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yrds.persist.dao.AttendancesMapper">
-  <resultMap id="BaseResultMap" type="com.yrds.persist.model.Attendances">
+<mapper namespace="com.yrds.iris.persist.dao.AttendancesMapper">
+  <resultMap id="BaseResultMap" type="com.yrds.iris.persist.model.Attendances">
     <!--
       WARNING - @mbg.generated
     -->

@@ -31,28 +31,52 @@ public class IrisFeatureTemp {
     private Integer imgDepth;
 
     /**
-     * 虹膜图像宽度
+     * 左眼虹膜图像宽度
      */
-    @Column(name = "img_width")
-    private Integer imgWidth;
+    @Column(name = "img_l_width")
+    private Integer imgLWidth;
 
     /**
-     * 虹膜图像高度
+     * 左眼虹膜图像高度
      */
-    @Column(name = "img_height")
-    private Integer imgHeight;
+    @Column(name = "img_l_height")
+    private Integer imgLHeight;
 
     /**
-     * 虹膜图像数据长度，字节为单位
+     * 左眼虹膜图像数据长度，字节为单位
      */
-    @Column(name = "img_len")
-    private Integer imgLen;
+    @Column(name = "img_l_len")
+    private Integer imgLLen;
 
     /**
-     * 虹膜特征模板长度，字节单位
+     * 左眼虹膜特征模板长度，字节单位
      */
-    @Column(name = "feature_len")
-    private Integer featureLen;
+    @Column(name = "feature_l_len")
+    private Integer featureLLen;
+
+    /**
+     * 右眼虹膜图像宽度
+     */
+    @Column(name = "img_r_width")
+    private Integer imgRWidth;
+
+    /**
+     * 右眼虹膜图像高度
+     */
+    @Column(name = "img_r_height")
+    private Integer imgRHeight;
+
+    /**
+     * 右眼虹膜图像数据长度，字节为单位
+     */
+    @Column(name = "img_r_len")
+    private Integer imgRLen;
+
+    /**
+     * 右眼虹膜特征模板长度，字节单位
+     */
+    @Column(name = "feature_r_len")
+    private Integer featureRLen;
 
     /**
      * 虹膜算法名称
@@ -67,6 +91,17 @@ public class IrisFeatureTemp {
     private String algVersion;
 
     /**
+     * 识别时间
+     */
+    @Column(name = "match_time")
+    private Date matchTime;
+
+    /**
+     * 状态，0：有效，1：锁定，2：无效
+     */
+    private Integer status;
+
+    /**
      * 创建时间
      */
     @Column(name = "gmt_create")
@@ -79,15 +114,28 @@ public class IrisFeatureTemp {
     private Date gmtUpdate;
 
     /**
-     * 图片数据
+     * 左眼图片数据
      */
-    @Column(name = "img_data")
-    private byte[] imgData;
+    @Column(name = "img_l_data")
+    private byte[] imgLData;
 
     /**
-     * 虹膜特征模板
+     * 左眼虹膜特征模板
      */
-    private byte[] feature;
+    @Column(name = "feature_l_data")
+    private byte[] featureLData;
+
+    /**
+     * 右眼图片数据
+     */
+    @Column(name = "img_r_data")
+    private byte[] imgRData;
+
+    /**
+     * 右眼虹膜特征模板
+     */
+    @Column(name = "feature_r_data")
+    private byte[] featureRData;
 
     /**
      * 获取主键ID
@@ -162,75 +210,147 @@ public class IrisFeatureTemp {
     }
 
     /**
-     * 获取虹膜图像宽度
+     * 获取左眼虹膜图像宽度
      *
-     * @return img_width - 虹膜图像宽度
+     * @return img_l_width - 左眼虹膜图像宽度
      */
-    public Integer getImgWidth() {
-        return imgWidth;
+    public Integer getImgLWidth() {
+        return imgLWidth;
     }
 
     /**
-     * 设置虹膜图像宽度
+     * 设置左眼虹膜图像宽度
      *
-     * @param imgWidth 虹膜图像宽度
+     * @param imgLWidth 左眼虹膜图像宽度
      */
-    public void setImgWidth(Integer imgWidth) {
-        this.imgWidth = imgWidth;
+    public void setImgLWidth(Integer imgLWidth) {
+        this.imgLWidth = imgLWidth;
     }
 
     /**
-     * 获取虹膜图像高度
+     * 获取左眼虹膜图像高度
      *
-     * @return img_height - 虹膜图像高度
+     * @return img_l_height - 左眼虹膜图像高度
      */
-    public Integer getImgHeight() {
-        return imgHeight;
+    public Integer getImgLHeight() {
+        return imgLHeight;
     }
 
     /**
-     * 设置虹膜图像高度
+     * 设置左眼虹膜图像高度
      *
-     * @param imgHeight 虹膜图像高度
+     * @param imgLHeight 左眼虹膜图像高度
      */
-    public void setImgHeight(Integer imgHeight) {
-        this.imgHeight = imgHeight;
+    public void setImgLHeight(Integer imgLHeight) {
+        this.imgLHeight = imgLHeight;
     }
 
     /**
-     * 获取虹膜图像数据长度，字节为单位
+     * 获取左眼虹膜图像数据长度，字节为单位
      *
-     * @return img_len - 虹膜图像数据长度，字节为单位
+     * @return img_l_len - 左眼虹膜图像数据长度，字节为单位
      */
-    public Integer getImgLen() {
-        return imgLen;
+    public Integer getImgLLen() {
+        return imgLLen;
     }
 
     /**
-     * 设置虹膜图像数据长度，字节为单位
+     * 设置左眼虹膜图像数据长度，字节为单位
      *
-     * @param imgLen 虹膜图像数据长度，字节为单位
+     * @param imgLLen 左眼虹膜图像数据长度，字节为单位
      */
-    public void setImgLen(Integer imgLen) {
-        this.imgLen = imgLen;
+    public void setImgLLen(Integer imgLLen) {
+        this.imgLLen = imgLLen;
     }
 
     /**
-     * 获取虹膜特征模板长度，字节单位
+     * 获取左眼虹膜特征模板长度，字节单位
      *
-     * @return feature_len - 虹膜特征模板长度，字节单位
+     * @return feature_l_len - 左眼虹膜特征模板长度，字节单位
      */
-    public Integer getFeatureLen() {
-        return featureLen;
+    public Integer getFeatureLLen() {
+        return featureLLen;
     }
 
     /**
-     * 设置虹膜特征模板长度，字节单位
+     * 设置左眼虹膜特征模板长度，字节单位
      *
-     * @param featureLen 虹膜特征模板长度，字节单位
+     * @param featureLLen 左眼虹膜特征模板长度，字节单位
      */
-    public void setFeatureLen(Integer featureLen) {
-        this.featureLen = featureLen;
+    public void setFeatureLLen(Integer featureLLen) {
+        this.featureLLen = featureLLen;
+    }
+
+    /**
+     * 获取右眼虹膜图像宽度
+     *
+     * @return img_r_width - 右眼虹膜图像宽度
+     */
+    public Integer getImgRWidth() {
+        return imgRWidth;
+    }
+
+    /**
+     * 设置右眼虹膜图像宽度
+     *
+     * @param imgRWidth 右眼虹膜图像宽度
+     */
+    public void setImgRWidth(Integer imgRWidth) {
+        this.imgRWidth = imgRWidth;
+    }
+
+    /**
+     * 获取右眼虹膜图像高度
+     *
+     * @return img_r_height - 右眼虹膜图像高度
+     */
+    public Integer getImgRHeight() {
+        return imgRHeight;
+    }
+
+    /**
+     * 设置右眼虹膜图像高度
+     *
+     * @param imgRHeight 右眼虹膜图像高度
+     */
+    public void setImgRHeight(Integer imgRHeight) {
+        this.imgRHeight = imgRHeight;
+    }
+
+    /**
+     * 获取右眼虹膜图像数据长度，字节为单位
+     *
+     * @return img_r_len - 右眼虹膜图像数据长度，字节为单位
+     */
+    public Integer getImgRLen() {
+        return imgRLen;
+    }
+
+    /**
+     * 设置右眼虹膜图像数据长度，字节为单位
+     *
+     * @param imgRLen 右眼虹膜图像数据长度，字节为单位
+     */
+    public void setImgRLen(Integer imgRLen) {
+        this.imgRLen = imgRLen;
+    }
+
+    /**
+     * 获取右眼虹膜特征模板长度，字节单位
+     *
+     * @return feature_r_len - 右眼虹膜特征模板长度，字节单位
+     */
+    public Integer getFeatureRLen() {
+        return featureRLen;
+    }
+
+    /**
+     * 设置右眼虹膜特征模板长度，字节单位
+     *
+     * @param featureRLen 右眼虹膜特征模板长度，字节单位
+     */
+    public void setFeatureRLen(Integer featureRLen) {
+        this.featureRLen = featureRLen;
     }
 
     /**
@@ -270,6 +390,42 @@ public class IrisFeatureTemp {
     }
 
     /**
+     * 获取识别时间
+     *
+     * @return match_time - 识别时间
+     */
+    public Date getMatchTime() {
+        return matchTime;
+    }
+
+    /**
+     * 设置识别时间
+     *
+     * @param matchTime 识别时间
+     */
+    public void setMatchTime(Date matchTime) {
+        this.matchTime = matchTime;
+    }
+
+    /**
+     * 获取状态，0：有效，1：锁定，2：无效
+     *
+     * @return status - 状态，0：有效，1：锁定，2：无效
+     */
+    public Integer getStatus() {
+        return status;
+    }
+
+    /**
+     * 设置状态，0：有效，1：锁定，2：无效
+     *
+     * @param status 状态，0：有效，1：锁定，2：无效
+     */
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    /**
      * 获取创建时间
      *
      * @return gmt_create - 创建时间
@@ -306,38 +462,74 @@ public class IrisFeatureTemp {
     }
 
     /**
-     * 获取图片数据
+     * 获取左眼图片数据
      *
-     * @return img_data - 图片数据
+     * @return img_l_data - 左眼图片数据
      */
-    public byte[] getImgData() {
-        return imgData;
+    public byte[] getImgLData() {
+        return imgLData;
     }
 
     /**
-     * 设置图片数据
+     * 设置左眼图片数据
      *
-     * @param imgData 图片数据
+     * @param imgLData 左眼图片数据
      */
-    public void setImgData(byte[] imgData) {
-        this.imgData = imgData;
+    public void setImgLData(byte[] imgLData) {
+        this.imgLData = imgLData;
     }
 
     /**
-     * 获取虹膜特征模板
+     * 获取左眼虹膜特征模板
      *
-     * @return feature - 虹膜特征模板
+     * @return feature_l_data - 左眼虹膜特征模板
      */
-    public byte[] getFeature() {
-        return feature;
+    public byte[] getFeatureLData() {
+        return featureLData;
     }
 
     /**
-     * 设置虹膜特征模板
+     * 设置左眼虹膜特征模板
      *
-     * @param feature 虹膜特征模板
+     * @param featureLData 左眼虹膜特征模板
      */
-    public void setFeature(byte[] feature) {
-        this.feature = feature;
+    public void setFeatureLData(byte[] featureLData) {
+        this.featureLData = featureLData;
+    }
+
+    /**
+     * 获取右眼图片数据
+     *
+     * @return img_r_data - 右眼图片数据
+     */
+    public byte[] getImgRData() {
+        return imgRData;
+    }
+
+    /**
+     * 设置右眼图片数据
+     *
+     * @param imgRData 右眼图片数据
+     */
+    public void setImgRData(byte[] imgRData) {
+        this.imgRData = imgRData;
+    }
+
+    /**
+     * 获取右眼虹膜特征模板
+     *
+     * @return feature_r_data - 右眼虹膜特征模板
+     */
+    public byte[] getFeatureRData() {
+        return featureRData;
+    }
+
+    /**
+     * 设置右眼虹膜特征模板
+     *
+     * @param featureRData 右眼虹膜特征模板
+     */
+    public void setFeatureRData(byte[] featureRData) {
+        this.featureRData = featureRData;
     }
 }
