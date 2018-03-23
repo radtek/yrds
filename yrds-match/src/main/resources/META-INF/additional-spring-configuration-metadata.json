@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "yrds.iris.sdk-library-path",
+  "type": "java.lang.String",
+  "description": "虹膜SDK路径"
+}]}
